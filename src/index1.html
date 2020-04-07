@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Obesity-Trends</title>
+    <!--script src="https://d3js.org/d3.v5.js"></script-->
+    <script src="js/d3.js"></script>
+    <!--script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.min.js"></script-->
+    <script src="js/topojson.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/css/bootstrap-slider.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css"/>
+    <script type="application/javascript" src="js/map.js"></script>
+    <script type="application/javascript" src="js/script.js"></script>
+
+
+
+
+
+
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Obesity Trends</h1>
+    </header>
+    <h3>Visualization for World Obesity Trends Related to Diet Composition</h3>
+</div>
+<ul>
+    <li><a class="active" href="index1.html" >Home</a></li>
+    <li><a href="https://github.com/wiljar00/VisualSeekers/blob/master/process.md" target="_blank">Process Book</a></li>
+    <li><a href="js/screenCast.html" target="_blank">Screen Cast</a></li>
+</ul>
+
+<div align="center" class="svg-container">
+    <h1 align="left">World Map</h1>
+
+    <svg width="1200" height="600" id="mapSvg" >
+        <!--<title id="float-text">World Map</title>-->
+        <g id="map" > </g>
+    </svg>
+
+</div>
+<div class="btn-group-vertical" role="group" aria-label="..." id="float-button-group-comparision" align="left">
+    <label class="container">Compare Countries
+        <input type="checkbox" id="comparision" >
+        <span class="checkmark"></span>
+    </label>
+</div>
+
+<div >
+
+
+    <h4 align="left" id="subHeading"></h4>
+    <div align="left">
+        <div>
+            <svg width="800" height="300" id="obesitylineChart" class="scaling-svg" viewBox="0 -20 750 300" >
+            </svg>
+            <!--<h4 align="right">Scatter Plot Plot:</h4>-->
+
+            <!--<h5>VegetablePlot:</h5>-->
+            <svg width="800" height="300" id="vegetablePlot" viewBox="170 -40 300 300"  class="scaling-right-svg">
+            </svg>
+        </div>
+        <div>
+            <svg width="800" height="300" id="vegetationLineChart" class="scaling-svg" viewBox="0 -20 750 300">
+            </svg>
+            <svg width="800" height="300" id="fruitPlot"  viewBox="170 -40 300 300"  class="scaling-right-svg">
+            </svg>
+        </div>
+        <div>
+            <svg width="800" height="300" id="fruitlineChart" class="scaling-svg" viewBox="0 -20 750 300">
+            </svg>
+            <svg width="800" height="300" id="seaFoodPlot" viewBox="170 -40 300 300"  class="scaling-right-svg">
+            </svg>
+        </div>
+        <div class="parent">
+            <svg width="800" height="300" id="seaFoodChart" class="scaling-svg" viewBox="0 -20 750 300">
+            </svg>
+            <svg width="200" height="500" id="obesityDistributionChart" transform="rotate(270)" class="scaling-right-barchart-svg" viewBox="-40 1000 650 3">
+                <g id="yAxis" class="xAxis"></g>
+            </svg>
+
+        </div>
+        <div class="parent">
+            <svg width="800" height="300" id="lifeExpectancyChart" class="scaling-svg" viewBox="0 -20 750 300">
+            </svg>
+            <svg width="200" height="500" id="obesityDistributionChart2" transform="rotate(270)" class="scaling-right-barchart-svg" viewBox="-40 1000 650 3">
+            </svg>
+        </div>
+
+    </div>
+
+    <hr>
+
+
+
+
+    <script type="application/javascript" src="js/ObesityDistributionGraph.js"></script>
+    <script type="application/javascript" src="js/lineGraphs.js"></script>
+    <script type="application/javascript" src="js/scatterPlot.js"></script>
+</div>
+</body>
+</html>
